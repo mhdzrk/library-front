@@ -4,6 +4,9 @@ function validation(){
     var pass = document.getElementById('pass').value.trim();
     var conpass = document.getElementById('conpass').value.trim();
     var phone = document.getElementById('phone').value.trim();
+    var address = document.getElementById('address').value.trim();
+    var dob = document.getElementById('dob').value.trim();
+    
     
     if (user == ""){
         document.getElementById('username').innerHTML="please fill username";
@@ -19,6 +22,21 @@ function validation(){
     }
     else{
         document.getElementById('username').innerHTML="";
+    }
+    if (address == ""){
+        document.getElementById('addresss').innerHTML="please fill address";
+        return false;
+    }
+    else{
+        document.getElementById('addresss').innerHTML="";
+    }
+    if (address.length <=2){
+        document.getElementById('addresss').innerHTML="username is too short";
+        return false;
+
+    }
+    else{
+        document.getElementById('addresss').innerHTML="";
     }
     if (email == ""){
         document.getElementById('emails').innerHTML="please fill email";
@@ -41,14 +59,8 @@ function validation(){
     else{
         document.getElementById('emails').innerHTML="";
     }
-    var regex1 =/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/ ;
-    if (regex1.test(email)){
-        document.getElementById('emails').innerhtml="";
-    }
-    else{
-        document.getElementById('emails').innerhtml="invalid email";
-        return false;
-    }
+   
+    
     if (pass == ""){
         document.getElementById('passs').innerHTML="please fill password";
         return false;
@@ -77,6 +89,13 @@ function validation(){
     else{
         document.getElementById('conpasss').innerHTML="";
     }
+    if (dob == ""){
+        document.getElementById('dobs').innerHTML="please fill your date of birth";
+        return false;
+    }
+    else{
+        document.getElementById('dobs').innerHTML="";
+    }
     if (phone == ""){
         document.getElementById('phones').innerHTML="please fill phone number";
         return false;
@@ -98,7 +117,22 @@ function validation(){
     }
     else{
         document.getElementById('phones').innerHTML="";
+    }
+    if(document.getElementById('male').checked){
+        document.getElementById('gender').innerHTML="";
         return true;
+    }
+    else if(document.getElementById('female').checked){
+        document.getElementById('gender').innerHTML="";
+        return true;
+    }
+    else if(document.getElementById('other').checked){
+        document.getElementById('gender').innerHTML="";
+        return true;
+    }
+    else{
+        document.getElementById('gender').innerHTML="please select a gender";
+        return false;
     }
    
     
