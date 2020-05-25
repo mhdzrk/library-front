@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+    <div class="navbar">
+        <ul class="list">
+            <li><a href="index.html" style="color: white;">HOME</a></li>
+            <li><a href="login.html" style="color: white;">LOGIN</a></li>
+            <li><a href="signup.html" style="color: white;">SIGNUP</a></li>
+            <li><a href="index.html" style="color: white;">CONTACT US</a></li>
+            <li><a href="index.html" style="color: white;">ABOUT US</a></li>
+            
+        </ul>
+
+
+    </div>
+    <div class="heading">
+        <h1>MovieBox</h1>
+        <div class="in_heading">
+
+        </div>
+    </div>
+    <div class="container" style="margin: auto;">
+        <div class="bg-light border" style="margin-top: 30px; margin-left:auto; margin-right: auto; padding: 30px; width: 30%; margin-bottom: 50px; border-radius: 10px;">
+        <h1 class="text-success text-center">log_in</h1>
+        <div class="col-lg-8 m-auto d-block">
+            <form action="index.html" onsubmit="return validation1()">
+                <div class="form-group">
+                    <label>username</label>
+                    <input type="text" name="user" class="form-control" id="user">
+                    <span id="username" class="text-danger"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label>password</label>
+                    <input type="password" name="pass" class="form-control" id="pass">
+                    <span id="passs" class="text-danger"></span>
+
+
+                </div>
+                
+                
+                <button type="submit" class="bg-dark  form-control text-light">signup</button>
+            </form>
+            <a href="signup.html" style="color: teal; text-align: center;"><p style="margin-top: 10px; margin-bottom: 0px; padding-bottom: 0px;">don't have an account?</p></a>
+            <a href="#" style="color: teal; padding: 10px; text-align: center;"><p class="border-top" style="padding-top: 20px;">login with google</p></a>
+        </div>
+        </div>
+    
+        
+        </form>
+    </div>
+    <div class="footer" style=" left: 0; bottom: 0; margin-bottom: 0px;">
+        <strong>Follow Us</strong><br> <span class="switch btn-warning navbar-btn button">instagram</span><span class=" switch btn-danger navbar-btn ">twitter</span><span style="border-bottom-right-radius: 4px; border-top-right-radius: 4px;" class="switch btn-primary navbar-btn"> facebook </span> 
+    </div>
+    <script src="form.js"></script>
+    
+</body>
+</html>
